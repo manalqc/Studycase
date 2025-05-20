@@ -1,0 +1,17 @@
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\obj\Debug\net8.0\SmartEvent.Services.csproj.AssemblyReference.cache
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\obj\Debug\net8.0\SmartEvent.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\obj\Debug\net8.0\SmartEvent.Services.AssemblyInfoInputs.cache
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\obj\Debug\net8.0\SmartEvent.Services.AssemblyInfo.cs
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\obj\Debug\net8.0\SmartEvent.Services.csproj.CoreCompileInputs.cache
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\bin\Debug\net8.0\SmartEvent.Services.deps.json
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\bin\Debug\net8.0\SmartEvent.Services.dll
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\bin\Debug\net8.0\SmartEvent.Services.pdb
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\bin\Debug\net8.0\SmartEvent.Core.dll
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\bin\Debug\net8.0\SmartEvent.Data.dll
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\bin\Debug\net8.0\SmartEvent.Core.pdb
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\bin\Debug\net8.0\SmartEvent.Data.pdb
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\obj\Debug\net8.0\SmartEve.E40FCBE4.Up2Date
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\obj\Debug\net8.0\SmartEvent.Services.dll
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\obj\Debug\net8.0\refint\SmartEvent.Services.dll
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\obj\Debug\net8.0\SmartEvent.Services.pdb
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Services\obj\Debug\net8.0\ref\SmartEvent.Services.dll

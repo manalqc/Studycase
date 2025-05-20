@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "eb8RK7U0GjOzzCsWCry/M+rAeiTVrz7x4uOA6Z/gu7M=",
+  "Source": "SmartEvent.RegistrationService",
+  "BasePath": "_content/SmartEvent.RegistrationService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,11 @@
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Core\bin\Debug\net8.0\SmartEvent.Core.deps.json
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Core\bin\Debug\net8.0\SmartEvent.Core.dll
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Core\bin\Debug\net8.0\SmartEvent.Core.pdb
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Core\obj\Debug\net8.0\SmartEvent.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Core\obj\Debug\net8.0\SmartEvent.Core.AssemblyInfoInputs.cache
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Core\obj\Debug\net8.0\SmartEvent.Core.AssemblyInfo.cs
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Core\obj\Debug\net8.0\SmartEvent.Core.csproj.CoreCompileInputs.cache
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Core\obj\Debug\net8.0\SmartEvent.Core.dll
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Core\obj\Debug\net8.0\refint\SmartEvent.Core.dll
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Core\obj\Debug\net8.0\SmartEvent.Core.pdb
+C:\Users\aliam\Desktop\Studycase-main\Studycase-main\SmartEvent\SmartEvent.Core\obj\Debug\net8.0\ref\SmartEvent.Core.dll

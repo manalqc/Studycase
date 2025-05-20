@@ -1,0 +1,6 @@
+@SmartEvent.RegistrationService_HostAddress = http://localhost:5160
+
+GET {{SmartEvent.RegistrationService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
