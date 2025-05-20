@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Plus, Edit, Trash2, Users, AlertTriangle } from 'lucide-react';
 import Layout from '../../components/Layout/Layout';
-import Button from '../../components/UI/Button';
 import { Event, Registration } from '../../types';
 import { eventsApi, registrationsApi } from '../../services/api';
 import { format } from 'date-fns';
@@ -87,67 +86,79 @@ const AdminEvents: React.FC = () => {
   
   return (
     <Layout>
-      <div className="page-container">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold gradient-text">Manage Events</h1>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+          <h1 className="text-3xl font-bold text-black">Manage Events</h1>
           <div className="flex space-x-3">
-            <Button
-              variant="outline"
+            <button
               onClick={() => navigate('/admin/debug')}
-              className="flex items-center"
+              className="flex items-center px-4 py-2 border-2 border-black text-black rounded-md hover:bg-black hover:text-white transition-colors"
             >
               Debug Tools
-            </Button>
-            <Button
+            </button>
+            <button
               onClick={() => navigate('/admin/events/new')}
-              className="flex items-center"
+              className="flex items-center px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors"
             >
               <Plus className="h-4 w-4 mr-2" />
               Create Event
-            </Button>
+            </button>
           </div>
         </div>
         
         {error && (
-          <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6 rounded-md">
+          <div className="bg-white border-l-4 border-orange-500 p-4 mb-6 rounded-md shadow-sm">
             <div className="flex">
-              <AlertTriangle className="h-5 w-5 text-red-500 mr-2" />
-              <p className="text-red-700">{error}</p>
+              <AlertTriangle className="h-5 w-5 text-orange-500 mr-2" />
+              <p className="text-black">{error}</p>
             </div>
           </div>
         )}
         
         {isLoading ? (
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="animate-pulse">
-              <div className="h-16 bg-gray-200"></div>
-              {[...Array(5)].map((_, index) => (
-                <div key={index} className="border-t border-gray-200 p-4">
-                  <div className="h-5 bg-gray-200 rounded w-1/3 mb-2"></div>
-                  <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-black">
+            {[...Array(5)].map((_, index) => (
+              <div key={index} className="flex items-center border-t border-black p-4">
+                <div className="h-12 w-12 rounded-md bg-orange-100 mr-4"></div>
+                <div className="flex-1">
+                  <div className="h-4 bg-orange-100 rounded w-3/4 mb-2"></div>
+                  <div className="h-3 bg-orange-100 rounded w-1/2"></div>
                 </div>
-              ))}
-            </div>
+                <div className="h-8 w-24 bg-orange-100 rounded-md"></div>
+              </div>
+            ))}
           </div>
         ) : events.length > 0 ? (
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-black">
+            <table className="min-w-full divide-y divide-black">
+              <thead className="bg-black">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                  >
                     Event
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                  >
                     Date
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                  >
                     Registrations
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                  >
                     Category
                   </th>
-                  <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Actions
+                  <th scope="col" className="relative px-6 py-3">
+                    <span className="sr-only">Actions</span>
                   </th>
                 </tr>
               </thead>
@@ -158,7 +169,7 @@ const AdminEvents: React.FC = () => {
                   const startDate = new Date(event.startDate);
                   
                   return (
-                    <tr key={event.id} className="hover:bg-gray-50">
+                    <tr key={event.id} className="hover:bg-orange-50 transition-colors">
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
                           <div className="h-10 w-10 flex-shrink-0 rounded overflow-hidden">
@@ -170,62 +181,57 @@ const AdminEvents: React.FC = () => {
                           </div>
                           <div className="ml-4">
                             <div className="text-sm font-medium text-gray-900">
-                              {event.title}
-                            </div>
-                            <div className="text-sm text-gray-500">
-                              {event.location}
+                              <div className="text-sm text-black font-medium">{event.title}</div>
+                              <div className="text-sm text-black truncate max-w-xs">
+                                {event.location}
+                              </div>
                             </div>
                           </div>
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-sm text-gray-900">
-                          {format(startDate, 'MMM d, yyyy')}
+                        <div className="text-sm text-black font-medium">
+                          {format(startDate, 'MMMM d, yyyy')}
                         </div>
-                        <div className="text-sm text-gray-500">
+                        <div className="text-sm text-black">
                           {format(startDate, 'h:mm a')}
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
-                          <Users className="h-4 w-4 text-primary-500 mr-1" />
-                          <span className="text-sm text-gray-900">
+                          <Users className="h-4 w-4 text-orange-500 mr-1" />
+                          <span className="text-sm text-black">
                             {registrationCount} / {event.capacity}
                           </span>
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-primary-100 text-primary-800">
+                        <span className="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-black">
                           {event.category}
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                         <div className="flex justify-end space-x-2">
-                          <Button
-                            variant="outline"
-                            size="sm"
+                          <button
                             onClick={() => navigate(`/events/${event.id}`)}
+                            className="px-3 py-1 text-xs border border-black text-black rounded hover:bg-black hover:text-white transition-colors"
                           >
                             View
-                          </Button>
-                          <Button
-                            variant="outline"
-                            size="sm"
+                          </button>
+                          <button
                             onClick={() => navigate(`/admin/events/edit/${event.id}`)}
-                            className="flex items-center"
+                            className="px-3 py-1 text-xs border border-black text-black rounded hover:bg-black hover:text-white transition-colors flex items-center"
                           >
                             <Edit className="h-3 w-3 mr-1" />
                             Edit
-                          </Button>
-                          <Button
-                            variant="danger"
-                            size="sm"
+                          </button>
+                          <button
                             onClick={() => setDeleteId(event.id)}
-                            className="flex items-center"
+                            className="px-3 py-1 text-xs bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors flex items-center"
                           >
                             <Trash2 className="h-3 w-3 mr-1" />
                             Delete
-                          </Button>
+                          </button>
                         </div>
                       </td>
                     </tr>
@@ -235,44 +241,55 @@ const AdminEvents: React.FC = () => {
             </table>
           </div>
         ) : (
-          <div className="bg-white rounded-lg shadow-md p-12 text-center">
-            <h2 className="text-2xl font-semibold text-gray-700 mb-2">
+          <div className="bg-white rounded-lg shadow-md p-12 text-center border border-black">
+            <h2 className="text-2xl font-semibold text-black mb-2">
               No events found
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-black mb-6">
               Create your first event to get started.
             </p>
-            <Button onClick={() => navigate('/admin/events/new')}>
+            <button 
+              onClick={() => navigate('/admin/events/new')}
+              className="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors"
+            >
               Create Event
-            </Button>
+            </button>
           </div>
         )}
         
         {/* Delete confirmation modal */}
         {deleteId && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-lg shadow-xl p-6 max-w-md w-full animate-fade-in">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
+            <div className="bg-white rounded-lg shadow-xl p-6 max-w-md w-full animate-fade-in border-2 border-black">
+              <h3 className="text-lg font-bold text-black mb-2">
                 Confirm Deletion
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-black mb-4">
                 Are you sure you want to delete this event? This action cannot be undone.
               </p>
               <div className="flex justify-end space-x-3">
-                <Button
-                  variant="outline"
+                <button
                   onClick={() => setDeleteId(null)}
                   disabled={isDeleting}
+                  className="px-4 py-2 border border-black text-black rounded-md hover:bg-black hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Cancel
-                </Button>
-                <Button
-                  variant="danger"
+                </button>
+                <button
                   onClick={handleDeleteEvent}
-                  isLoading={isDeleting}
+                  disabled={isDeleting}
+                  className="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Delete
-                </Button>
+                  {isDeleting ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Deleting...
+                    </>
+                  ) : 'Delete'}
+                </button>
               </div>
             </div>
           </div>

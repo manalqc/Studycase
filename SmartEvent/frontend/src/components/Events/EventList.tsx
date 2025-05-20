@@ -31,7 +31,7 @@ const EventList: React.FC<EventListProps> = ({ events, isLoading = false }) => {
       <div className="flex flex-col md:flex-row gap-4">
         {/* Search box */}
         <div className="relative flex-grow">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black h-5 w-5" />
           <input
             type="text"
             placeholder="Search events..."
@@ -43,7 +43,7 @@ const EventList: React.FC<EventListProps> = ({ events, isLoading = false }) => {
         
         {/* Category filter */}
         <div className="relative w-full md:w-64">
-          <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+          <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black h-5 w-5" />
           <select
             className="form-input pl-10 appearance-none"
             value={categoryFilter}
@@ -56,7 +56,7 @@ const EventList: React.FC<EventListProps> = ({ events, isLoading = false }) => {
               </option>
             ))}
           </select>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-black">
             <svg
               className="fill-current h-4 w-4"
               xmlns="http://www.w3.org/2000/svg"
@@ -75,13 +75,13 @@ const EventList: React.FC<EventListProps> = ({ events, isLoading = false }) => {
       {isLoading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[...Array(6)].map((_, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden animate-pulse">
-              <div className="bg-gray-300 h-48 w-full" />
+            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden animate-pulse border border-black">
+              <div className="bg-orange-100 h-48 w-full" />
               <div className="p-5 space-y-3">
-                <div className="h-6 bg-gray-300 rounded w-3/4" />
-                <div className="h-4 bg-gray-300 rounded w-1/2" />
-                <div className="h-4 bg-gray-300 rounded w-5/6" />
-                <div className="h-10 bg-gray-300 rounded w-full mt-4" />
+                <div className="h-6 bg-orange-100 rounded w-3/4" />
+                <div className="h-4 bg-orange-100 rounded w-1/2" />
+                <div className="h-4 bg-orange-100 rounded w-5/6" />
+                <div className="h-10 bg-orange-100 rounded w-full mt-4" />
               </div>
             </div>
           ))}
@@ -93,9 +93,9 @@ const EventList: React.FC<EventListProps> = ({ events, isLoading = false }) => {
           ))}
         </div>
       ) : (
-        <div className="text-center py-12">
-          <h3 className="text-lg font-medium text-gray-900 mb-2">No events found</h3>
-          <p className="text-gray-600">
+        <div className="text-center py-12 border border-black rounded-lg">
+          <h3 className="text-lg font-medium text-black mb-2">No events found</h3>
+          <p className="text-black">
             {searchTerm || categoryFilter
               ? "Try adjusting your search or filter criteria."
               : "There are no events available at the moment."}
